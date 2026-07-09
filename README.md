@@ -1,16 +1,18 @@
-## DXC2 Setup
+## DXC2
 
 ### box.cfg
 
+````
 Tn_retrude: -10 -> Tn_retrude: -25  
-switch_pin:!nozzle_mcu:PB9 -> switch_pin:nozzle_mcu:PB9
-
+switch_pin:!nozzle_mcu:PB9 -> switch_pin:nozzle_mcu:PB9 # Allows you to use Creality's own cutters
+````
 ### gcode_macro.cfg -> [gcode_macro QUIT_MATERIAL_RETRUDE_MATERIAL]
-
+````
 G0 E-10 F360 -> G0 E-40 F360
-
+````
 ## Auto Cleanup
 
+````
 Step 1 — pick a name and number. Order matters: lower numbers run first. Klipper is S55klipper and the moonraker-style printer service is probably in the 50s-60s range. We need to run before klipper starts (so the dashboard is clean by the time it shows the file list) but after the filesystem is mounted writable. S50klipper-cleanup is a safe slot — runs at the same priority as klipper, alphabetically first.
 If you want to be extra-safe and run before klipper, S49klipper-cleanup (Klipper is S55, so S49 runs first). I'd go with that.
 Step 2 — the script. Save this to /etc/init.d/S49klipper-cleanup on the printer (the file name is /etc/init.d/S49klipper-cleanup):
@@ -64,6 +66,7 @@ update-rc.d S49klipper-cleanup defaults 2>/dev/null || /etc/init.d/rcS 2>/dev/nu
 
 # 5. Confirm the files are gone.
 ls -la /mnt/UDISK/printer_data/gcodes/ | grep -E '3DBench|3DBenchy|Crealitylogo' || echo "all three gone"
+````
 
 ## K2Dash
 
