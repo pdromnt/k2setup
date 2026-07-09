@@ -13,12 +13,16 @@ G0 E-10 F360 -> G0 E-40 F360
 ## Auto Cleanup
 
 ````
-Step 1 — pick a name and number. Order matters: lower numbers run first. Klipper is S55klipper and the moonraker-style printer service is probably in the 50s-60s range.
-We need to run before klipper starts (so the dashboard is clean by the time it shows the file list) but after the filesystem is mounted writable.
+Step 1 — pick a name and number. Order matters: lower numbers run first.
+Klipper is S55klipper and the moonraker-style printer service is probably in the 50s-60s range.
+We need to run before klipper starts (so the dashboard is clean by the time it shows the file list)
+but after the filesystem is mounted writable.
 S50klipper-cleanup is a safe slot — runs at the same priority as klipper, alphabetically first.
 
 If you want to be extra-safe and run before klipper, S49klipper-cleanup (Klipper is S55, so S49 runs first). I'd go with that.
-Step 2 — the script. Save this to /etc/init.d/S49klipper-cleanup on the printer (the file name is /etc/init.d/S49klipper-cleanup):
+Step 2 — the script. Save this to /etc/init.d/S49klipper-cleanup on the printer
+(the file name is /etc/init.d/S49klipper-cleanup):
+  
 #!/bin/sh
 
 # Remove the three Creality ROM-overlay demo gcodes. Creality's firmware
