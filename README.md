@@ -17,7 +17,7 @@ G0 E-10 F360 -> G0 E-40 F360
 2. On line 239, right before the ```sync``` command, comment the rsync command with a hash:
 
 ```bash
-    # rsync -a $GCODE_PATH/* ${GCODE_FILES_DIR}/
+# rsync -a $GCODE_PATH/* ${GCODE_FILES_DIR}/
 ```
 3. Delete the files via the printer's screen or Fluidd and reboot printer
 
