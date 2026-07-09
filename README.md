@@ -19,7 +19,7 @@ G0 E-10 F360 -> G0 E-40 F360
 ```bash
     # rsync -a $GCODE_PATH/* ${GCODE_FILES_DIR}/
 ```
-3. Reboot printer
+3. Delete the files via the printer's screen or Fluidd and reboot printer
 
 ## K2Dash
 
