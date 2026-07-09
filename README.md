@@ -14,7 +14,7 @@ G0 E-10 F360 -> G0 E-40 F360
 
 1. Open /etc/init.d/klipper in vim
   
-2. On line 242, right before the ```sync``` command, comment the rsync command with a hash:
+2. On line 239, right before the ```sync``` command, comment the rsync command with a hash:
 
 ```bash
     # rsync -a $GCODE_PATH/* ${GCODE_FILES_DIR}/
