@@ -1,3 +1,8 @@
+# What is this?
+This is my custom setup for my Creality K2 Plus. Some people would probably benefit from using some of those things (like the DXC2 config that allows you to use Creality's cutters) or my own project, the K2Dash.
+
+Enjoy. Please don't open PRs or issues.
+
 ## DXC2
 
 ### box.cfg
