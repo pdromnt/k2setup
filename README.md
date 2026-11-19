@@ -11,6 +11,13 @@ Enjoy. Please don't open PRs or issues.
 Tn_retrude: -10 -> Tn_retrude: -25  
 switch_pin:!nozzle_mcu:PB9 -> switch_pin:nozzle_mcu:PB9 # Allows you to use Creality's own cutters
 ````
+
+Optional, this allows you to use Creality's cutters instead of the DXC2 cutter if you want without needing to transplant the blade of inverting the magnet:
+
+````
+switch_pin:!nozzle_mcu:PB9 -> switch_pin:nozzle_mcu:PB9
+````
+
 ### gcode_macro.cfg -> [gcode_macro QUIT_MATERIAL_RETRUDE_MATERIAL]
 ````
 G0 E-10 F360 -> G0 E-40 F360
