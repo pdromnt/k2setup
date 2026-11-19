@@ -11,7 +11,7 @@ Enjoy. Please don't open PRs or issues.
 Tn_retrude: -10 -> Tn_retrude: -25  
 ````
 
-Optional, this allows you to use Creality's cutters instead of the DXC2 cutter if you want without needing to transplant the blade of inverting the magnet:
+Optional, this allows you to use Creality's cutters instead of the DXC2 cutter if you want without the need to transplant the blade or inverting the magnet:
 
 ````
 switch_pin:!nozzle_mcu:PB9 -> switch_pin:nozzle_mcu:PB9
